@@ -1,0 +1,264 @@
+.page-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0fdf4;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.main-header {
+  background-color: #0f9d58;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.header-icon-circle {
+  background-color: #fff8f8;
+  color: #10b981;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+
+.schedule-container {
+  max-width: 1200px;
+  margin: -2rem auto 0;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.schedule-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #111827;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .schedule-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .schedule-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.schedule-card {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background-color: white;
+}
+
+.schedule-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-day {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 0.25rem 0;
+}
+
+.card-type {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.card-time {
+  font-size: 1rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.card-recycling {
+  background-color: #dbeafe;
+}
+.card-recycling .card-icon, .card-recycling .card-day { color: #1e40af; }
+
+.card-organic {
+  background-color: #dcfce7;
+}
+.card-organic .card-icon, .card-organic .card-day { color: #166534; }
+
+.card-general {
+  background-color: #e5e7eb;
+}
+.card-general .card-icon, .card-general .card-day { color: #374151; }
+
+.card-bulk {
+  background-color: #fef08a;
+}
+.card-bulk .card-icon, .card-bulk .card-day { color: #854d0e; }
+
+.card-none {
+  background-color: #fee2e2;
+}
+.card-none .card-icon, .card-none .card-day { color: #991b1b; }
+
+.calendar-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) { .calendar-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .calendar-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.calendar-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border: 1px solid #e5e7eb;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cal-day {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.cal-date {
+  font-size: 0.875rem;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.event-block {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.event-icon { margin-right: 0.75rem; font-size: 1.25rem; }
+
+.event-details { display: flex; flex-direction: column; }
+
+.event-name { font-weight: 600; font-size: 0.95rem; }
+.event-time { font-size: 0.75rem; opacity: 0.8; }
+
+.event-general { background: #f3f4f6; color: #374151; }
+.event-recycling { background: #eff6ff; color: #1d4ed8; }
+.event-organic { background: #ecfdf5; color: #047857; }
+
+.no-collection {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #9ca3af;
+}
+
+.guide-section {
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.guide-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.guide-card {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.guide-general { background: #f9fafb; }
+.guide-recycling { background: #eff6ff; }
+.guide-organic { background: #f0fdf4; }
+
+.guide-icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: rgba(255,255,255,0.5);
+}
+
+.reminders-section {
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  padding: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 10px;
+}
+
+.reminders-title {
+  margin-bottom: 20px;
+  color: #0c4a6e;
+}
+
+@media (max-width: 768px) {
+  .guide-grid, .schedule-grid, .calendar-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,208 @@
+:root {
+  --primary-green: #0f9d58;
+  --bg-light: #f0fdf4;
+  --text-dark: #1f2937;
+  --text-gray: #6b7280;
+  --border-color: #e5e7eb;
+  
+  --status-resolved-bg: #dcfce7;
+  --status-resolved-text: #166534;
+  --status-progress-bg: #dbeafe;
+  --status-progress-text: #1e40af;
+  --status-pending-bg: #fef3c7;
+  --status-pending-text: #92400e;
+}
+
+.track-status-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8fcf9;
+}
+
+.status-header {
+  background-color: var(--primary-green);
+  padding: 3rem 1rem;
+  text-align: center;
+  color: white;
+}
+
+.header-icon-circle {
+  background-color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 7px auto 20px auto;
+}
+
+.header-icon-circle svg {
+  color: var(--primary-green);
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: white;
+}
+
+.header-subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+  color: white;
+  margin-bottom: -16.5px;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 60px;
+}
+
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter-btn:hover {
+  background-color: #f9fafb;
+}
+
+.filter-btn.active {
+  background-color: var(--primary-green);
+  color: white;
+  border-color: var(--primary-green);
+}
+
+.count-badge {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.issues-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .issues-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .issues-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.issue-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 10px;
+}
+
+.issue-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.issues-grid {
+  margin-bottom: 60px;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.status-resolved {
+  background-color: var(--status-resolved-bg);
+  color: var(--status-resolved-text);
+}
+
+.status-in-progress {
+  background-color: var(--status-progress-bg);
+  color: var(--status-progress-text);
+}
+
+.status-pending {
+  background-color: var(--status-pending-bg);
+  color: var(--status-pending-text);
+}
+
+.issue-description {
+  color: var(--text-gray);
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+.card-details {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1rem;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  margin-bottom: 0.6rem;
+}
+
+.detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.detail-icon {
+  width: 18px;
+  height: 18px;
+  color: #10b981;
+  flex-shrink: 0;
+}
